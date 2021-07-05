@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LaunchAppController">
+   <children>
+      <Button layoutX="247.0" layoutY="348.0" mnemonicParsing="false" onAction="#ExitPressed" prefHeight="52.0" prefWidth="131.0" text="Exit">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TextField editable="false" prefHeight="102.0" prefWidth="624.0" text="       To-Do List Creator">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </TextField>
+      <Button layoutY="102.0" mnemonicParsing="false" onAction="#AddToDoPressed" prefHeight="44.0" prefWidth="125.0" text="Add New To-Do List" />
+      <Button layoutY="192.0" mnemonicParsing="false" onAction="#DeleteToDoPressed" prefHeight="44.0" prefWidth="125.0" text="Delete Existing List" />
+      <Button layoutY="284.0" mnemonicParsing="false" onAction="#EditToDoTitle" prefHeight="44.0" prefWidth="125.0" text="Edit To-Do List Title" />
+      <Button layoutX="125.0" layoutY="102.0" mnemonicParsing="false" onAction="#AddItemPressed" prefHeight="44.0" prefWidth="125.0" text="Add Item to List" />
+      <Button layoutX="125.0" layoutY="192.0" mnemonicParsing="false" onAction="#DeleteItemPressed" prefHeight="44.0" prefWidth="125.0" text="Delete item from list" />
+      <Button layoutX="125.0" layoutY="284.0" mnemonicParsing="false" onAction="#EditDescriptionPressed" prefHeight="44.0" prefWidth="125.0" text="Edit list description" />
+      <Button layoutX="250.0" layoutY="102.0" mnemonicParsing="false" onAction="#DueDatePressed" prefHeight="44.0" prefWidth="125.0" text="Edit List Due Date" />
+      <Button layoutX="250.0" layoutY="284.0" mnemonicParsing="false" onAction="#SaveOneListPressed" prefHeight="44.0" prefWidth="125.0" text="Save Single List" />
+      <Button layoutX="375.0" layoutY="102.0" mnemonicParsing="false" onAction="#LoadOneListPressed" prefHeight="44.0" prefWidth="125.0" text="Load To Do List" />
+      <Button layoutX="375.0" layoutY="192.0" mnemonicParsing="false" onAction="#SaveAllListsPressed" prefHeight="44.0" prefWidth="125.0" text="Save All Lists" />
+      <Button layoutX="375.0" layoutY="284.0" mnemonicParsing="false" onAction="#LoadMultipleListsPressed" prefHeight="44.0" prefWidth="125.0" text="Load Multiple Lists" />
+      <Button layoutX="500.0" layoutY="102.0" mnemonicParsing="false" onAction="#DisplayAllItemsPressed" prefHeight="44.0" prefWidth="125.0" text="Display All Lists" />
+      <Button layoutX="500.0" layoutY="192.0" mnemonicParsing="false" onAction="#DisplayCompletedPressed" prefHeight="44.0" prefWidth="125.0" text="Display Completed" />
+      <Button layoutX="500.0" layoutY="284.0" mnemonicParsing="false" onAction="#DisplayIncompletePressed" prefHeight="44.0" prefWidth="125.0" text="Display Incomplete" />
+      <CheckBox layoutX="250.0" layoutY="192.0" mnemonicParsing="false" onAction="#ItemCompleteChecked" prefHeight="44.0" prefWidth="125.0" text="Item Completed" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+@startuml
+'https://plantuml.com/class-diagram
+
++class LaunchApp {
+    main() : String[]
+    start()
+}
+
++class LaunchAppController {
+
+    +ExitPressed(actionEvent : ActionEvent)
+    +AddToDoPressed(actionEvent : ActionEvent)
+    +DeleteToDoPressed(actionEvent : ActionEvent)
+    +EditToDoTitle(actionEvent : ActionEvent)
+    +AddItemPressed(actionEvent : ActionEvent)
+    +DeleteItemPressed(actionEvent : ActionEvent)
+    +EditDescriptionPressed(actionEvent : ActionEvent)
+    +DueDatePressed(actionEvent : ActionEvent)
+    +SaveOneListPressed(actionEvent : ActionEvent)
+    +LoadOneListPressed(actionEvent : ActionEvent)
+    +SaveAllListsPressed(actionEvent : ActionEvent)
+    +LoadMultipleListsPressed(actionEvent : ActionEvent)
+    +DisplayAllListsPressed(actionEvent : ActionEvent)
+    +DisplayCompletedPressed(actionEvent : ActionEvent)
+    +DisplayIncompletePressed(actionEvent : ActionEvent)
+    +ItemCompleteChecked(actionEvent : ActionEvent)
+    +ListTitleEntered(actionEvent : ActionEvent)
+    +MenuButtonPressed(actionEvent : ActionEvent)
+    +DeleteItemTyped(actionEvent : ActionEvent)
+    +OldToDoTitleTyped(actionEvent : ActionEvent)
+    +NewToDoTitleTyped(actionEvent : ActionEvent)
+    +ItemTitleEntered(actionEvent : ActionEvent)
+    +ItemDescEntered(actionEvent : ActionEvent)
+    +ItemDateEntered(actionEvent : ActionEvent)
+    +NewDescriptionEntered(actionEvent : ActionEvent)
+    +NewDateEntered(actionEvent : ActionEvent)
+    +SaveListTitleEntered(actionEvent : ActionEvent)
+    +DisplayTitleEntered(actionEvent : ActionEvent)
+    +CompleteChecked(actionEvent : ActionEvent)
+    +NumListTyped(actionEvent : ActionEvent)
+
+}
+
++class listAttributes {
+    +title : String
+    +list : List<itemAttributes>
+}
+
++class itemAttributes {
+    +description : String
+    +dueDate : String
+    +title : String
+    +status : String
+
+    +setDescription(description : String)
+    +setDueDate(dueDate : String)
+    +setItemTitle(title : String)
+    +setStatus(status : String)
+    }
+
++class ListFunctions {
+    +ToDo : ArrayList<listAttributes>
+    +list : List<itemAttributes>
+    +AddList(list : List<itemAttributes>, title : String) : ArrayList<listAttributes>
+    +DeleteList(index : int) : ArrayList<listAttributes>
+    +EditTitle(index : int, newTitle : String) : ArrayList<listAttributes>
+    +AddItem(item : itemAttributes) : List<itemAttributes>
+    +DeleteItem(item : itemAttributes, ListTitle : String) : List<itemAttributes>
+    +EditDescription(item : itemAttributes, ListTitle : String) : String
+    +EditDueDate(item : itemAttributes, ListTitle : String) : String
+    +SaveOneList(title : String)
+    +LoadOneList(title : String)
+    +SaveAllLists()
+    +LoadMultipleLists(array : int[])
+    +DisplayAllItems(title : String) : ArrayList<listAttributes>
+    +DisplayCompleted(ListIndex : int) : List<itemAttributes>
+    +DisplayIncomplete(ListIndex : int) : List<itemAttributes>
+    +ItemComplete(item : itemAttributes, index : int) : String
+}
+javafx.Application <|-- LaunchApp
+LaunchAppController -- LaunchApp
+ListFunctions o--> LaunchAppController
+ListFunctions <|-- listAttributes
+listAttributes <|-- itemAttributes
+@enduml

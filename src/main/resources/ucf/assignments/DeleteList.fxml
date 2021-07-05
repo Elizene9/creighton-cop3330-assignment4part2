@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LaunchAppController">
+   <children>
+      <Button layoutX="257.0" layoutY="324.0" mnemonicParsing="false" onAction="#ExitPressed" prefHeight="62.0" prefWidth="126.0" text="EXIT">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="324.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="62.0" prefWidth="126.0" text="MENU">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TextArea editable="false" layoutY="63.0" prefHeight="84.0" prefWidth="605.0" text="Type Title of list you want to delete">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </TextArea>
+      <TextField layoutY="145.0" onAction="#DeleteItemTyped" prefHeight="25.0" prefWidth="605.0" />
+   </children>
+</AnchorPane>

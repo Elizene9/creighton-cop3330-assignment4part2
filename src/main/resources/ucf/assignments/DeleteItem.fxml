@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LaunchAppController">
+    <children>
+        <TextArea fx:id="Title" editable="false" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" text="                     Type the title of your item here&#10;&#10;&#10;                    Type the item description here&#10;&#10;&#10;                    Type the item due date here">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </TextArea>
+        <TextField fx:id="ItemTitle" layoutY="45.0" onAction="#ItemTitleEntered" prefHeight="25.0" prefWidth="600.0" />
+        <TextField fx:id="ItemDescription" layoutY="146.0" onAction="#ItemDescEntered" prefHeight="25.0" prefWidth="600.0" />
+        <TextField fx:id="ItemDate" layoutY="256.0" onAction="#ItemDateEntered" prefHeight="25.0" prefWidth="600.0" />
+        <Button layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="MENU">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Button>
+        <Button layoutX="220.0" layoutY="319.0" mnemonicParsing="false" onAction="#ExitPressed" prefHeight="77.0" prefWidth="160.0" text="EXIT">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Button>
+        <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="NEXT">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
+
