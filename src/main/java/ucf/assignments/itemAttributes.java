@@ -5,27 +5,46 @@
 
 package ucf.assignments;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // Sets all item attributes
 public class itemAttributes {
 
-    public String description;
-    public String dueDate;
-    public String itemTitle;
-    public String status;
+    // List items to be updated
+    public static String title;
+    public static String description;
+    public static String dueDate;
+    public static String[] status = new String[500];
 
-    public void setDescription(String description) {
-        // This method sets the description of an item in a to-do list
+    // List of strings to store all titles, descriptions, and dates
+    private static List<String> ToDoListTitle = new ArrayList<>();
+    private static List<String> ToDoListDescription = new ArrayList<>();
+    private static List<String> ToDoListDueDate = new ArrayList<>();
+
+    // Setters and getters allowing access to lists
+    public static void setToDoListTitle(List<String> toDoListTitle) {
+        ToDoListTitle = toDoListTitle;
     }
 
-    public void setDueDate(String dueDate) {
-        // This method sets the due date of an item in a to-do list
+    public static List<String> getToDoListTitle() {
+        return ToDoListTitle;
     }
 
-    public void setItemTitle(String itemTitle) {
-        // This method sets the title of an item in a to-do list so they can be organized
+    public static List<String> getToDoListDescription() {
+        return ToDoListDescription;
     }
 
-    public void setStatus(String status) {
-       // This method sets status of item as either complete or incomplete
+    public static List<String> getToDoListDueDate() {
+        return ToDoListDueDate;
     }
+
+    public static void setToDoListDescription(List<String> toDoListDescription) {
+        ToDoListDescription = toDoListDescription;
+    }
+
+    public static void setToDoListDueDate(List<String> toDoListDueDate) {
+        ToDoListDueDate = toDoListDueDate;
+    }
+
 }

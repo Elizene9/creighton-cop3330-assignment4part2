@@ -4,10 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LaunchAppController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.DeleteListController">
    <children>
-      <Button layoutX="257.0" layoutY="324.0" mnemonicParsing="false" onAction="#ExitPressed" prefHeight="62.0" prefWidth="126.0" text="EXIT">
+      <Button layoutX="465.0" layoutY="324.0" mnemonicParsing="false" onAction="#ExitPressed" prefHeight="62.0" prefWidth="126.0" text="EXIT">
          <font>
             <Font size="24.0" />
          </font>
@@ -17,11 +16,20 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <TextArea editable="false" layoutY="63.0" prefHeight="84.0" prefWidth="605.0" text="Type Title of list you want to delete">
+      <TextArea editable="false" layoutY="152.0" prefHeight="84.0" prefWidth="605.0" text=" Are you sure you want to clear the entire list?">
          <font>
-            <Font size="36.0" />
+            <Font size="28.0" />
          </font>
       </TextArea>
-      <TextField layoutY="145.0" onAction="#DeleteItemTyped" prefHeight="25.0" prefWidth="605.0" />
+      <Button layoutX="209.0" layoutY="237.0" mnemonicParsing="false" onAction="#ClearList" prefHeight="62.0" prefWidth="187.0" text="DELETE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
+      <Button layoutX="240.0" layoutY="324.0" mnemonicParsing="false" onAction="#HelpPressed" prefHeight="62.0" prefWidth="126.0" text="HELP">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

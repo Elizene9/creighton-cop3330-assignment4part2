@@ -4,14 +4,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LaunchAppController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.SaveListController">
    <children>
-      <TextArea editable="false" layoutY="107.0" prefHeight="68.0" prefWidth="606.0" text="   Enter title of list you want to save here">
+      <TextArea editable="false" layoutY="1.0" prefHeight="170.0" prefWidth="606.0" text="     Enter the name of your list file below&#10;                Press Save to save List&#10;       (Do not enter file extension name)">
          <font>
             <Font size="30.0" />
          </font>
       </TextArea>
-      <TextField fx:id="SaveList" layoutY="173.0" onAction="#SaveListTitleEntered" prefHeight="25.0" prefWidth="606.0" />
       <Button layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="MENU">
          <font>
             <Font size="36.0" />
@@ -22,10 +21,16 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="NEXT">
+      <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#SavePressed" prefHeight="77.0" prefWidth="160.0" text="SAVE">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
+      <Button layoutX="432.0" layoutY="222.0" mnemonicParsing="false" onAction="#HelpPressed" prefHeight="77.0" prefWidth="160.0" text="HELP">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <TextField fx:id="fileName" layoutX="3.0" layoutY="169.0" onAction="#fileNamePressed" prefHeight="25.0" prefWidth="600.0" />
    </children>
 </AnchorPane>

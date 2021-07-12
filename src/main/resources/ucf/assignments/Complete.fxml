@@ -4,12 +4,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LaunchAppController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.CompleteController">
    <children>
-      <TextArea editable="false" layoutX="1.0" layoutY="154.0" prefHeight="146.0" prefWidth="594.0" text="   Displaying all Completed Items:">
+      <TextArea fx:id="TitleDisplay" editable="false" layoutX="1.0" layoutY="84.0" prefHeight="227.0" prefWidth="600.0" text="   ">
          <font>
-            <Font size="36.0" />
+            <Font size="18.0" />
          </font>
       </TextArea>
       <Button layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="MENU">
@@ -22,7 +21,12 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="NEXT">
+      <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#HelpPressed" prefHeight="77.0" prefWidth="160.0" text="HELP">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Type" layoutX="51.0" layoutY="4.0" mnemonicParsing="false" onAction="#Print" prefHeight="77.0" prefWidth="539.0" text="Click to Display Items">
          <font>
             <Font size="36.0" />
          </font>

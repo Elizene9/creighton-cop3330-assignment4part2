@@ -9,31 +9,34 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LaunchApp extends Application {
 
     // Main class launched
     public static void main(String[] args) {
-        launch(args);
+
+        // Set all statuses to have no value
+        for (int i = 0; i < 500; i++)
+            itemAttributes.status[i] ="";
+            launch(args);
     }
 
+    // Load first scene of app
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
 
         // Launch application at runtime, creates first page of application and shows it when run
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("LaunchApp.fxml"));
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.setTitle("LaunchApp");
-            primaryStage.show();
+        var scene = new Scene(new Pane());
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        ChangeScenes.stageScene(scene);
+        ChangeScenes.Change(ViewScenes.LaunchApp);
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 }

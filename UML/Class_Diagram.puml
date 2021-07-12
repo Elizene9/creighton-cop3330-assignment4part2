@@ -1,85 +1,208 @@
 @startuml
 'https://plantuml.com/class-diagram
 
++class AddItemController {
+    +ItemTitle : TextField
+    +ItemDescription : TextField
+    +ItemDate : TextField
+    -itemTitle : String
+    -itemDescription : String
+    -itemDate : String
+    use : itemAttributes
+    +ItemTitleEntered(actionevent : ActionEvent)
+    +ItemDescEntered(actionevent : ActionEvent)
+    +ItemDateEntered(actionevent : ActionEvent)
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    +SaveItemPressed(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
+}
+
++class ChangeScenes {
+    +scene : Scene
+    +stageScene(scene : Scene)
+    +Change(view : ViewScenes)
+}
+
++class CompleteController {
+    +TitleDisplay : TextArea
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    +Print(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
+}
+
++class DeleteItemController {
+    +ItemTitle : TextField
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    +ItemTitlePressed(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
+    +DisplayAllPressed(actionevent : ActionEvent)
+}
+
++class DeleteListController {
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    +ClearList(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
+}
+
++class DisplayAllController {
+    +TitleDisplay : TextArea
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    call : itemAttributes
+    text : String
+    +HelpPressed(actionevent : ActionEvent)
+    +Print(actionevent : ActionEvent)
+}
+
++class EditDetailsController {
+
+    +oldTitle : TextField
+    +oldDescription : TextField
+    +oldDate : TextField
+    +newTitle : TextField
+    +newDescription : TextField
+    +newDate : TextField
+
+    -OldTitle : String
+    -OldDescription : String
+    -OlddueDate : String
+    -NewTitle : String
+    -NewDescription : String
+    -NewdueDate : String
+
+    call : itemAttributes
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    +EditPressed(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
+    +DisplayAllPressed(actionevent : ActionEvent)
+
+    +NewItemTitleEntered(actionevent : ActionEvent)
+    +NewItemDescEntered(actionevent : ActionEvent)
+    +NewItemDateEntered(actionevent : ActionEvent)
+    +OldItemTitleEntered(actionevent : ActionEvent)
+    +OldItemDescEntered(actionevent : ActionEvent)
+    +OldItemDateEntered(actionevent : ActionEvent)
+}
+
++class HelpScreenController {
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+}
+
++class IncompleteController {
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
+    +Print(actionevent : ActionEvent)
+    o : int
+    text : String
+    TitleDisplay : TextArea
+}
+
++class itemAttributes {
+    +title : String
+    +description : String
+    +dueDate : String
+    -ToDoListTitle : List<String>
+    -ToDoListDescription : List<String>
+    -ToDoListDueDate : List<String>
+    +setToDoListTitle(ToDoListTitle : List<String>)
+    +getToDoListTitle() : List<String>
+    +setToDoListDescription(ToDoListDescription : List<String>)
+    +getToDoListDescription() : List<String>
+    +setToDoListDueDate(ToDoListDueDate : List<String>)
+    +getToDoListDueDate() : List<String>
+}
+
 +class LaunchApp {
     main() : String[]
     start()
 }
 
 +class LaunchAppController {
-
-    +ExitPressed(actionEvent : ActionEvent)
-    +AddToDoPressed(actionEvent : ActionEvent)
-    +DeleteToDoPressed(actionEvent : ActionEvent)
-    +EditToDoTitle(actionEvent : ActionEvent)
-    +AddItemPressed(actionEvent : ActionEvent)
-    +DeleteItemPressed(actionEvent : ActionEvent)
-    +EditDescriptionPressed(actionEvent : ActionEvent)
-    +DueDatePressed(actionEvent : ActionEvent)
-    +SaveOneListPressed(actionEvent : ActionEvent)
-    +LoadOneListPressed(actionEvent : ActionEvent)
-    +SaveAllListsPressed(actionEvent : ActionEvent)
-    +LoadMultipleListsPressed(actionEvent : ActionEvent)
-    +DisplayAllListsPressed(actionEvent : ActionEvent)
-    +DisplayCompletedPressed(actionEvent : ActionEvent)
-    +DisplayIncompletePressed(actionEvent : ActionEvent)
-    +ItemCompleteChecked(actionEvent : ActionEvent)
-    +ListTitleEntered(actionEvent : ActionEvent)
-    +MenuButtonPressed(actionEvent : ActionEvent)
-    +DeleteItemTyped(actionEvent : ActionEvent)
-    +OldToDoTitleTyped(actionEvent : ActionEvent)
-    +NewToDoTitleTyped(actionEvent : ActionEvent)
-    +ItemTitleEntered(actionEvent : ActionEvent)
-    +ItemDescEntered(actionEvent : ActionEvent)
-    +ItemDateEntered(actionEvent : ActionEvent)
-    +NewDescriptionEntered(actionEvent : ActionEvent)
-    +NewDateEntered(actionEvent : ActionEvent)
-    +SaveListTitleEntered(actionEvent : ActionEvent)
-    +DisplayTitleEntered(actionEvent : ActionEvent)
-    +CompleteChecked(actionEvent : ActionEvent)
-    +NumListTyped(actionEvent : ActionEvent)
-
+    +ExitPressed(actionevent : ActionEvent)
+    +DeleteToDoPressed(actionevent : ActionEvent)
+    +EditToDoTitlePressed(actionevent : ActionEvent)
+    +AddItemPressed(actionevent : ActionEvent)
+    +DeleteItemPressed(actionevent : ActionEvent)
+    +EditDescriptionPressed(actionevent : ActionEvent)
+    +DueDatePressed(actionevent : ActionEvent)
+    +SaveOneListPressed(actionevent : ActionEvent)
+    +LoadOneListPressed(actionevent : ActionEvent)
+    +DisplayAllItemsPressed(actionevent : ActionEvent)
+    +DisplayCompletedPressed(actionevent : ActionEvent)
+    +DisplayIncompletePressed(actionevent : ActionEvent)
+    +MarkCompletePressed(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
 }
 
-+class listAttributes {
-    +title : String
-    +list : List<itemAttributes>
++class LoadListController {
+    file : Scanner
+    +TitleDisplay : TextArea
+    +fileName : TextField
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    +fileNameTyped(actionevent : ActionEvent)
+    +LoadPressed(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
 }
 
-+class itemAttributes {
-    +description : String
-    +dueDate : String
-    +title : String
-    +status : String
-
-    +setDescription(description : String)
-    +setDueDate(dueDate : String)
-    +setItemTitle(title : String)
-    +setStatus(status : String)
-    }
-
-+class ListFunctions {
-    +ToDo : ArrayList<listAttributes>
-    +list : List<itemAttributes>
-    +AddList(list : List<itemAttributes>, title : String) : ArrayList<listAttributes>
-    +DeleteList(index : int) : ArrayList<listAttributes>
-    +EditTitle(index : int, newTitle : String) : ArrayList<listAttributes>
-    +AddItem(item : itemAttributes) : List<itemAttributes>
-    +DeleteItem(item : itemAttributes, ListTitle : String) : List<itemAttributes>
-    +EditDescription(item : itemAttributes, ListTitle : String) : String
-    +EditDueDate(item : itemAttributes, ListTitle : String) : String
-    +SaveOneList(title : String)
-    +LoadOneList(title : String)
-    +SaveAllLists()
-    +LoadMultipleLists(array : int[])
-    +DisplayAllItems(title : String) : ArrayList<listAttributes>
-    +DisplayCompleted(ListIndex : int) : List<itemAttributes>
-    +DisplayIncomplete(ListIndex : int) : List<itemAttributes>
-    +ItemComplete(item : itemAttributes, index : int) : String
++class MarkCompleteController {
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    +DisplayAllPressed(actionevent : ActionEvent)
+    +ItemTitleEntered(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
+    +ItemTitle : TextField
 }
-javafx.Application <|-- LaunchApp
-LaunchAppController -- LaunchApp
-ListFunctions o--> LaunchAppController
-ListFunctions <|-- listAttributes
-listAttributes <|-- itemAttributes
+
++class SaveListController {
+    +fileName : TextField
+    +writer : FileWriter
+    filename : String
+    +MenuButtonPressed(actionevent : ActionEvent)
+    +ExitPressed(actionevent : ActionEvent)
+    +fileNamePressed(actionevent : ActionEvent)
+    +SavePressed(actionevent : ActionEvent)
+    +HelpPressed(actionevent : ActionEvent)
+}
+
++enum ViewScenes {
+    AddItem : File
+    Complete : File
+    DeleteItem : File
+    DeleteList : File
+    DisplayAll : File
+    EditDetails : File
+    HelpScreen : File
+    Incomplete : File
+    LaunchApp : File
+    LoadList : File
+    MarkComplete : File
+    SaveOneList : File
+    +file : String
+    +getFile() : String
+}
+
+AddItemController <|-- LaunchApp
+ChangeScenes <|-- LaunchApp
+CompleteController <|-- LaunchApp
+DeleteItemController <|-- LaunchApp
+DeleteListController <|-- LaunchApp
+DisplayAllController <|-- LaunchApp
+EditDetailsController <|-- LaunchApp
+HelpScreenController <|-- LaunchApp
+IncompleteController <|-- LaunchApp
+itemAttributes <|-- LaunchApp
+LaunchAppController <|-- LaunchApp
+LoadListController <|-- LaunchApp
+MarkCompleteController <|-- LaunchApp
+SaveListController <|-- LaunchApp
+ViewScenes <|-- LaunchApp
+
 @enduml

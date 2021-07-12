@@ -4,28 +4,32 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LaunchAppController">
+<AnchorPane prefHeight="400.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.DisplayAllController">
     <children>
-        <TextArea editable="false" layoutX="96.0" layoutY="231.0" prefHeight="51.0" prefWidth="428.0" text="Enter the title of your to-do list here">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </TextArea>
-        <TextField fx:id="displayTitle" layoutX="96.0" layoutY="278.0" onAction="#DisplayTitleEntered" prefHeight="25.0" prefWidth="428.0" />
-        <Button layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="MENU">
+        <Button layoutX="219.0" layoutY="319.0" mnemonicParsing="false" onAction="#ExitPressed" prefHeight="77.0" prefWidth="202.0" text="EXIT">
             <font>
                 <Font size="36.0" />
             </font>
         </Button>
-        <Button layoutX="220.0" layoutY="319.0" mnemonicParsing="false" onAction="#ExitPressed" prefHeight="77.0" prefWidth="160.0" text="EXIT">
+        <Button fx:id="Next" layoutX="466.0" layoutY="319.0" mnemonicParsing="false" onAction="#HelpPressed" prefHeight="77.0" prefWidth="160.0" text="HELP">
             <font>
                 <Font size="36.0" />
             </font>
         </Button>
-        <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="NEXT">
-            <font>
-                <Font size="36.0" />
-            </font>
-        </Button>
+      <TextArea fx:id="TitleDisplay" editable="false" layoutY="85.0" prefHeight="234.0" prefWidth="626.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextArea>
+      <Button layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="174.0" text="MENU">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Type" layoutX="51.0" layoutY="4.0" mnemonicParsing="false" onAction="#Print" prefHeight="77.0" prefWidth="539.0" text="Click to Display Items">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

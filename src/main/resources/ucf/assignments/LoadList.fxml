@@ -4,14 +4,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LaunchAppController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LoadListController">
     <children>
-        <TextArea editable="false" layoutY="107.0" prefHeight="68.0" prefWidth="606.0" text="   Enter title of list you want to load here">
+        <TextArea fx:id="TitleDisplay" editable="false" layoutY="-1.0" prefHeight="250.0" prefWidth="606.0" text="   &#10;&#10;&#10;     Press load to load the list from file and view&#10;    What file would you like to load the list from?&#10;(Enter below Case sensitive include file extension)">
             <font>
-                <Font size="30.0" />
+                <Font size="26.0" />
             </font>
         </TextArea>
-        <TextField fx:id="LoadList" layoutY="173.0" onAction="#LoadListTitleEntered" prefHeight="25.0" prefWidth="606.0" />
         <Button layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="MENU">
             <font>
                 <Font size="36.0" />
@@ -22,10 +21,16 @@
                 <Font size="36.0" />
             </font>
         </Button>
-        <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="NEXT">
+        <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#HelpPressed" prefHeight="77.0" prefWidth="160.0" text="HELP">
             <font>
                 <Font size="36.0" />
             </font>
         </Button>
+      <TextField fx:id="fileName" layoutX="193.0" layoutY="249.0" onAction="#fileNameTyped" prefHeight="25.0" prefWidth="207.0" />
+      <Button fx:id="Load" layoutX="432.0" layoutY="249.0" mnemonicParsing="false" onAction="#LoadPressed" prefHeight="48.0" prefWidth="160.0" text="LOAD">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

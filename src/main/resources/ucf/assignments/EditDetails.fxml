@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.EditDetailsController">
+    <children>
+        <TextArea fx:id="Title" editable="false" layoutY="-1.0" prefHeight="320.0" prefWidth="600.0" text="Old title here                       New title here&#10;&#10;Old Description here           New Description here&#10;            &#10;Old Due Date here              New Due Date here&#10;&#10;                    Press edit to save these details&#10;">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </TextArea>
+        <TextField fx:id="oldTitle" layoutY="45.0" onAction="#OldItemTitleEntered" prefHeight="25.0" prefWidth="297.0" />
+        <TextField fx:id="oldDescription" layoutY="110.0" onAction="#OldItemDescEntered" prefHeight="25.0" prefWidth="297.0" />
+        <TextField fx:id="oldDate" layoutY="187.0" onAction="#OldItemDateEntered" prefHeight="25.0" prefWidth="297.0" />
+        <Button layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="152.0" text="MENU">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Button>
+        <Button layoutX="152.0" layoutY="319.0" mnemonicParsing="false" onAction="#ExitPressed" prefHeight="77.0" prefWidth="143.0" text="EXIT">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Button>
+        <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#DisplayAllPressed" prefHeight="77.0" prefWidth="160.0" text="Display Items ">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+      <Button layoutX="295.0" layoutY="319.0" mnemonicParsing="false" onAction="#HelpPressed" prefHeight="77.0" prefWidth="137.0" text="HELP">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button layoutX="463.0" layoutY="242.0" mnemonicParsing="false" onAction="#EditPressed" prefHeight="50.0" prefWidth="137.0" text="EDIT">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <TextField fx:id="newTitle" layoutX="300.0" layoutY="45.0" onAction="#NewItemTitleEntered" prefHeight="25.0" prefWidth="297.0" />
+      <TextField fx:id="newDescription" layoutX="300.0" layoutY="110.0" onAction="#NewItemDescEntered" prefHeight="25.0" prefWidth="297.0" />
+      <TextField fx:id="newDate" layoutX="300.0" layoutY="188.0" onAction="#NewItemDateEntered" prefHeight="25.0" prefWidth="297.0" />
+    </children>
+</AnchorPane>

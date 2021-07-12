@@ -4,8 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.LaunchAppController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.AddItemController">
    <children>
       <TextArea fx:id="Title" editable="false" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" text="                     Type the title of your item here&#10;&#10;&#10;                    Type the item description here&#10;&#10;&#10;                    Type the item due date here">
          <font>
@@ -25,9 +24,14 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="NEXT">
+      <Button fx:id="SaveButton" layoutX="432.0" layoutY="319.0" mnemonicParsing="false" onAction="#SaveItemPressed" prefHeight="77.0" prefWidth="160.0" text="Save">
          <font>
             <Font size="36.0" />
+         </font>
+      </Button>
+      <Button layoutY="7.0" mnemonicParsing="false" onAction="#HelpPressed" prefHeight="30.0" prefWidth="135.0" text="HELP">
+         <font>
+            <Font size="14.0" />
          </font>
       </Button>
    </children>
