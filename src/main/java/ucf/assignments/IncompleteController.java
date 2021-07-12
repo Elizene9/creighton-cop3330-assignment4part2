@@ -56,6 +56,6 @@ public class IncompleteController {
                 o++;
             }
         }
-        ChangeScenes.Change(ViewScenes.Incomplete);
+        //ChangeScenes.Change(ViewScenes.Incomplete);
     }
 }
