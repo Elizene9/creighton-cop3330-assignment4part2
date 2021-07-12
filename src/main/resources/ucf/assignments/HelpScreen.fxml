@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.HelpScreenController">
+    <children>
+        <TextArea fx:id="Title" editable="false" layoutY="-1.0" prefHeight="313.0" prefWidth="600.0" text="Thank you to Rey for all the pain and suffering...&#10;&#10;The To do list app has a menu allowing interaction with your to do list&#10;To access this menu at any moment in the app, press Menu&#10;&#10;To add an item to the list, press Add item to edit the details of your item &#10;You will then be able to edit the item's title, desciption, and due date&#10;&#10;To delete an item from the to do list press delete item&#10;You will then have to type the title of the item you desire to delete&#10;&#10;To view list, press display all to see all items&#10;To delete the entire list press Delete list&#10;You will be asked if you want to clear it, if so, press DELETE&#10;&#10;To load the list press load list; &#10;You will have to type the name of the file you want to load from&#10;Then press load to see this list;&#10;&#10;To save the list, press save list, then type the name of the file you want&#10;(Without the file extension) &#10;&#10;To show only completed items, press show complete&#10;To show only incomplete items press show incomplete&#10;&#10;To mark an item complete, press update status&#10;Then type the title of the item you want to mark as complete&#10;&#10;To return to the menu press menu&#10;To exit the app press exit&#10;&#10;To view this help page again, press help&#10;To edit any of the details of an item press edit description, title, or due date&#10;Then just type the old info and enter the new info, and click edit">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </TextArea>
+        <Button layoutX="14.0" layoutY="311.0" mnemonicParsing="false" onAction="#MenuButtonPressed" prefHeight="77.0" prefWidth="160.0" text="MENU">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Button>
+        <Button layoutX="440.0" layoutY="311.0" mnemonicParsing="false" onAction="#ExitPressed" prefHeight="77.0" prefWidth="160.0" text="EXIT">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
